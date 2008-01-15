@@ -4,7 +4,7 @@
 Summary: Perl bindings for EggTrayManager
 Name:    perl-%module
 Version: 0.05
-Release: %mkrel 3
+Release: %mkrel 4
 License: GPL or Artistic
 Group:   Development/GNOME and GTK+
 Source:  %module-%version.tar.bz2
