@@ -1,23 +1,24 @@
-%define module Gtk2-TrayManager
-%define fmodule Gtk2/TrayManager
+%define upstream_name    Gtk2-TrayManager
+%define upstream_version 0.05
 
-Summary: Perl bindings for EggTrayManager
-Name:    perl-%module
-Version: 0.05
-Release: %mkrel 6
-License: GPL or Artistic
-Group:   Development/GNOME and GTK+
-Source:  %module-%version.tar.bz2
-URL: http://gtk2-perl.sf.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Perl bindings for EggTrayManager
+License:    GPL+ or Artistic
+Group:      Development/GNOME and GTK+
+URL:        http://gtk2-perl.sf.net/
+Source0:    %{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires: glitz-devel
 BuildRequires: gtkspell-devel 
 BuildRequires: perl-ExtUtils-Depends 
 BuildRequires: perl-Gtk2
 BuildRequires: perl-Glib > 1.00 
 BuildRequires: perl-ExtUtils-PkgConfig 
-BuildRequires: glitz-devel
 Buildrequires: perl-devel
-
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 Requires: gtk+2
 
 %description
@@ -27,9 +28,8 @@ server-side of the Notification Area (or system tray) protocol.
 Gtk2::TrayManager allows you to create notification area applications using
 Gtk2-Perl.
 
-
 %prep
-%setup -q -n %module-%version
+%setup -q -n %{upstream_name}-%{upstream_version}
 find -type d -name CVS | rm -rf 
 
 %build
@@ -45,12 +45,9 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files
 %defattr(-, root, root)
 %doc examples/*
 %{_mandir}/*/*
-%{perl_vendorarch}/%{fmodule}*
-%{perl_vendorarch}/%fmodule.pm
-%{perl_vendorarch}/auto/%fmodule
-
+%{perl_vendorarch}/Gtk2/*
+%{perl_vendorarch}/auto/Gtk2/*
