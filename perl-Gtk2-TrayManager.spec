@@ -8,7 +8,7 @@ Release:	5
 Summary:	Perl bindings for EggTrayManager
 License:	GPL+ or Artistic
 Group:		Development/GNOME and GTK+
-URL:		http://gtk2-perl.sf.net/
+URL:		https://gtk2-perl.sf.net/
 Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	glitz-devel
