@@ -11,6 +11,7 @@ Group:		Development/GNOME and GTK+
 URL:		https://gtk2-perl.sf.net/
 Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	glitz-devel
 BuildRequires:	gtkspell-devel 
 BuildRequires:	perl-devel
