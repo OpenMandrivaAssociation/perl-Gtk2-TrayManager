@@ -2,14 +2,14 @@
 %define upstream_version 0.05
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	6
 
 Summary:	Perl bindings for EggTrayManager
 License:	GPL+ or Artistic
 Group:		Development/GNOME and GTK+
 URL:		https://gtk2-perl.sf.net/
-Source0:	%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BORUP/Gtk2-TrayManager-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	glitz-devel
