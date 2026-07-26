@@ -1,15 +1,13 @@
 %define upstream_name    Gtk2-TrayManager
-%define upstream_version 0.05
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.05
+Release:	7
 
 Summary:	Perl bindings for EggTrayManager
 License:	GPL+ or Artistic
 Group:		Development/GNOME and GTK+
 URL:		https://gtk2-perl.sf.net/
-Source0:	https://cpan.metacpan.org/authors/id/B/BO/BORUP/Gtk2-TrayManager-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BORUP/Gtk2-TrayManager-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	glitz-devel
@@ -29,7 +27,7 @@ Gtk2::TrayManager allows you to create notification area applications using
 Gtk2-Perl.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 find -type d -name CVS | rm -rf 
 
 %build
@@ -54,9 +52,7 @@ make OPTIMIZE="%{optflags} -Os -s"
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.50.0-1mdv2011.0
 + Revision: 403232
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.05-6mdv2009.0
+- rebuild using %0.05 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.05-6mdv2009.0
 + Revision: 257187
 - rebuild
 
