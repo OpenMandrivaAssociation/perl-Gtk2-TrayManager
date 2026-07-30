@@ -1,13 +1,14 @@
 %define upstream_name    Gtk2-TrayManager
+%define upstream_version 0.05
 Name:		perl-%{upstream_name}
 Version:	0.05
-Release:	7
+Release:	1
 
 Summary:	Perl bindings for EggTrayManager
 License:	GPL+ or Artistic
 Group:		Development/GNOME and GTK+
 URL:		https://gtk2-perl.sf.net/
-Source0:	https://cpan.metacpan.org/authors/id/B/BO/BORUP/Gtk2-TrayManager-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BORUP/Gtk2-TrayManager-0.05.tar.gz
 
 BuildRequires:	make
 BuildRequires:	glitz-devel
@@ -44,36 +45,4 @@ make OPTIMIZE="%{optflags} -Os -s"
 %{perl_vendorarch}/Gtk2/*
 %{perl_vendorarch}/auto/Gtk2/*
 
-
-%changelog
-* Wed Jan 25 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 0.50.0-2
-+ Revision: 768358
-- svn commit -m mass rebuild of perl extension against perl 5.14.2
-
-* Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.50.0-1mdv2011.0
-+ Revision: 403232
-- rebuild using %0.05 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.05-6mdv2009.0
-+ Revision: 257187
-- rebuild
-
-* Tue Jan 15 2008 Thierry Vignaud <tv@mandriva.org> 0.05-4mdv2008.1
-+ Revision: 152117
-- rebuild
-
-  + Olivier Blin <blino@mandriva.org>
-    - restore BuildRoot
-
-* Mon Dec 17 2007 Thierry Vignaud <tv@mandriva.org> 0.05-3mdv2008.1
-+ Revision: 122674
-- kill re-definition of %%buildroot on Pixel's request
-
-
-* Fri Sep 30 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.05-3mdk
-- fix mistake
-
-* Fri Sep 30 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.05-2mdk
-- Fix BuildRequires
-
-* Thu May 19 2005 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.05-1mdk
-- initial release
 
