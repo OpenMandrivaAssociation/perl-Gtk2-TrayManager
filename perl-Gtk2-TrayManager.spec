@@ -2,7 +2,7 @@
 %define upstream_version 0.05
 Name:		perl-%{upstream_name}
 Version:	0.05
-Release:	1
+Release:	2
 
 Summary:	Perl bindings for EggTrayManager
 License:	GPL+ or Artistic
@@ -28,7 +28,7 @@ Gtk2::TrayManager allows you to create notification area applications using
 Gtk2-Perl.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n Gtk2-TrayManager-0.05
 find -type d -name CVS | rm -rf 
 
 %build
