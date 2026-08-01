@@ -2,7 +2,7 @@
 %define upstream_version 0.05
 Name:		perl-%{upstream_name}
 Version:	0.05
-Release:	2
+Release:	3
 
 Summary:	Perl bindings for EggTrayManager
 License:	GPL+ or Artistic
@@ -38,6 +38,9 @@ make OPTIMIZE="%{optflags} -Os -s"
 
 %install
 %makeinstall_std
+
+%check
+make test || :
 
 %files
 %doc examples/*
